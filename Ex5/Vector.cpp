@@ -24,3 +24,15 @@ double Vector::CalculateNorm() const {
 	std::cout << "La norm du vector est : " << norm;
 	return norm;
 }	
+
+
+Vector::Vector(const Point& p1, const Point& p2){
+	this->_p1 = p1;
+	this->_p2 = p2;
+}
+
+
+Vector::Vector(const Vector& vector){
+	this->setP1(vector.getP1());
+	this->setP2(vector.getP2());
+}
